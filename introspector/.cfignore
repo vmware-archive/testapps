@@ -1,0 +1,11 @@
+.cfignore
+*.log
+/someDir/baz.txt
+ignoredDir
+/badDir/*
+/fooDir/**/baz.txt
+/lib/
+*ignore-me*
+
+important-stuff/*/*.css
+important-stuff/**/foo/*.html

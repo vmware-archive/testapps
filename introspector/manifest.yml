@@ -1,0 +1,8 @@
+---
+applications:
+- name: pushed-with-cf
+  memory: 256M
+  instances: 1
+  host: pushed-with-cf
+  domain: acceptance.cli.cf-app.com
+  path: .
