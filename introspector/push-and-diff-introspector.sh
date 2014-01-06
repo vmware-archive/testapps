@@ -1,6 +1,5 @@
-!/usr/bin/env bash
+#!/usr/bin/env bash
 
-success = cd ~/workspace/testapps/introspector
 gcf login -a api.acceptance.cli.cf-app.com -u jalford -p jalford -o unsc -s reach
 cf target api.acceptance.cli.cf-app.com
 cf login --username jalford --password jalford -o unsc -s reach
@@ -29,3 +28,9 @@ EORUBY
 
 echo "For reference, here's the .cfignore:"
 cat .cfignore
+
+# Cleanup, comment-out to disable:
+rm pushed-with-gcf.txt
+rm pushed-with-cf.txt
+gcf delete pushed-with-gcf -f
+gcf delete pushed-with-cf -f
