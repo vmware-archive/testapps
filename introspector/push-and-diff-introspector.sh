@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-gcf login -a api.acceptance.cli.cf-app.com -u jalford -p jalford -o unsc -s reach
+gcf login -a api.acceptance.cli.cf-app.com -u introspector -p introspector -o introspector -s introspector
 cf target api.acceptance.cli.cf-app.com
-cf login --username jalford --password jalford -o unsc -s reach
+cf login --username introspector --password introspector -o introspector -s introspector
 gcf push pushed-with-gcf
 cf push pushed-with-cf
 curl pushed-with-gcf.acceptance.cli.cf-app.com > pushed-with-gcf.txt
@@ -30,7 +30,12 @@ echo "For reference, here's the .cfignore:"
 cat .cfignore
 
 # Cleanup, comment-out to disable:
+echo ""
 rm pushed-with-gcf.txt
 rm pushed-with-cf.txt
 gcf delete pushed-with-gcf -f
 gcf delete pushed-with-cf -f
+gcf delete-route acceptance.cli.cf-app.com -n pushed-with-gcf -f
+gcf delete-route acceptance.cli.cf-app.com -n pushed-with-cf -f
+gcf logout
+cf logout
