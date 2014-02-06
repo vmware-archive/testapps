@@ -1,0 +1,7 @@
+---
+applications:
+- name: PAPERdora
+  memory: 256M
+# services:
+# - PAPERTRAIL
+# - PAPERTRAIL0

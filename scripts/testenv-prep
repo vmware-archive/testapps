@@ -1,0 +1,20 @@
+#!/bin/bash
+
+echo "Creating useful files..."
+touch ~/workspace/trace/cf_trace.txt
+echo ""
+
+echo "Setting useful environmental variables..."
+export CF_TRACE=~/cf_trace.txt
+export CF_MANIFESTS=true
+echo ""
+
+echo "Installing useful scripts..."
+cp ~/workspace/testapps/shell-scripts/gcf-update /usr/local/bin
+echo ""
+
+echo "Updating gcf..."
+gcf-update
+echo ""
+
+echo "Okay, let's go!"
