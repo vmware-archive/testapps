@@ -1,0 +1,150 @@
+
+[1;38mREQUEST:[0m
+GET /v2/spaces/b141ad92-cde3-480f-a462-4559b78b7eb0/apps?q=name%3Ahn0&inline-relations-depth=1 HTTP/1.1
+Host: api.run.pivotal.io
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+Content-Type: application/json
+User-Agent: go-cli 6.0.0.rc2-e59f983 / darwin
+
+
+
+[1;38mRESPONSE:[0m
+HTTP/1.1 200 OK
+Content-Length: 3961
+Connection: keep-alive
+Content-Type: application/json;charset=utf-8
+Date: Mon, 20 Jan 2014 18:56:55 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: 5ffd1c0b-407d-4cf8-a5e4-d2a9f8b3daaf
+
+{
+  "total_results": 1,
+  "total_pages": 1,
+  "prev_url": null,
+  "next_url": null,
+  "resources": [
+    {
+      "metadata": {
+        "guid": "e8b383e8-aed8-413d-ae96-1685df96ffbb",
+        "url": "/v2/apps/e8b383e8-aed8-413d-ae96-1685df96ffbb",
+        "created_at": "2014-01-17T22:27:03+00:00",
+        "updated_at": "2014-01-20T18:48:39+00:00"
+      },
+      "entity": {
+        "name": "hn0",
+        "production": false,
+        "space_guid": "b141ad92-cde3-480f-a462-4559b78b7eb0",
+        "stack_guid": "50688ae5-9bfc-4bf6-a4bf-caadb21a32c6",
+        "buildpack": null,
+        "detected_buildpack": "Node.js",
+        "environment_json": {
+          "TEST_ENV": "test"
+        },
+        "memory": 64,
+        "instances": 2,
+        "disk_quota": 1024,
+        "state": "STARTED",
+        "version": "42c386a5-b4a1-4704-a1d4-47e4eeebdfc0",
+        "command": "node app.js",
+        "console": false,
+        "debug": null,
+        "staging_task_id": "a4ff6a24225c4fd39ec2bb10d7a4782f",
+        "package_state": "STAGED",
+        "health_check_timeout": null,
+        "space_url": "/v2/spaces/b141ad92-cde3-480f-a462-4559b78b7eb0",
+        "space": {
+          "metadata": {
+            "guid": "b141ad92-cde3-480f-a462-4559b78b7eb0",
+            "url": "/v2/spaces/b141ad92-cde3-480f-a462-4559b78b7eb0",
+            "created_at": "2013-11-06T05:35:43+00:00",
+            "updated_at": null
+          },
+          "entity": {
+            "name": "staging",
+            "organization_guid": "66bbcd33-3374-419f-8554-3f8918739821",
+            "organization_url": "/v2/organizations/66bbcd33-3374-419f-8554-3f8918739821",
+            "developers_url": "/v2/spaces/b141ad92-cde3-480f-a462-4559b78b7eb0/developers",
+            "managers_url": "/v2/spaces/b141ad92-cde3-480f-a462-4559b78b7eb0/managers",
+            "auditors_url": "/v2/spaces/b141ad92-cde3-480f-a462-4559b78b7eb0/auditors",
+            "apps_url": "/v2/spaces/b141ad92-cde3-480f-a462-4559b78b7eb0/apps",
+            "domains_url": "/v2/spaces/b141ad92-cde3-480f-a462-4559b78b7eb0/domains",
+            "service_instances_url": "/v2/spaces/b141ad92-cde3-480f-a462-4559b78b7eb0/service_instances",
+            "app_events_url": "/v2/spaces/b141ad92-cde3-480f-a462-4559b78b7eb0/app_events",
+            "events_url": "/v2/spaces/b141ad92-cde3-480f-a462-4559b78b7eb0/events"
+          }
+        },
+        "stack_url": "/v2/stacks/50688ae5-9bfc-4bf6-a4bf-caadb21a32c6",
+        "stack": {
+          "metadata": {
+            "guid": "50688ae5-9bfc-4bf6-a4bf-caadb21a32c6",
+            "url": "/v2/stacks/50688ae5-9bfc-4bf6-a4bf-caadb21a32c6",
+            "created_at": "2013-11-19T19:34:57+00:00",
+            "updated_at": "2013-11-19T19:34:57+00:00"
+          },
+          "entity": {
+            "name": "lucid64",
+            "description": "Ubuntu 10.04"
+          }
+        },
+        "service_bindings_url": "/v2/apps/e8b383e8-aed8-413d-ae96-1685df96ffbb/service_bindings",
+        "service_bindings": [
+
+        ],
+        "routes_url": "/v2/apps/e8b383e8-aed8-413d-ae96-1685df96ffbb/routes",
+        "routes": [
+          {
+            "metadata": {
+              "guid": "314f8340-c0ea-4b8c-a9ee-629e6748d75a",
+              "url": "/v2/routes/314f8340-c0ea-4b8c-a9ee-629e6748d75a",
+              "created_at": "2014-01-17T18:24:39+00:00",
+              "updated_at": null
+            },
+            "entity": {
+              "host": "hn0",
+              "domain_guid": "fb6bd89f-2ed9-49d4-9ad1-97951a573135",
+              "space_guid": "b141ad92-cde3-480f-a462-4559b78b7eb0",
+              "domain_url": "/v2/domains/fb6bd89f-2ed9-49d4-9ad1-97951a573135",
+              "space_url": "/v2/spaces/b141ad92-cde3-480f-a462-4559b78b7eb0",
+              "apps_url": "/v2/routes/314f8340-c0ea-4b8c-a9ee-629e6748d75a/apps"
+            }
+          }
+        ],
+        "events_url": "/v2/apps/e8b383e8-aed8-413d-ae96-1685df96ffbb/events",
+        "events": [
+
+        ]
+      }
+    }
+  ]
+}
+
+[1;38mREQUEST:[0m
+GET /v2/apps/e8b383e8-aed8-413d-ae96-1685df96ffbb/instances/0/files/app/invalid HTTP/1.1
+Host: api.run.pivotal.io
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+Content-Type: application/json
+User-Agent: go-cli 6.0.0.rc2-e59f983 / darwin
+
+
+
+[1;38mREQUEST:[0m
+GET /instance_paths/cbfe7b8819c04014be99ab467261412d?hmac=ba370c7c677978756c747e70e124dece3c623c57f5e866c39c23d752d3237d59bebe4ee9543e21e84e49e28bc6e8ca094b56f5bee3e5c136040f39b971b05909&path=app%2Finvalid&timestamp=1390244216 HTTP/0.0
+Host: d9c30a6caa6e49d8ba8cd9a5eb2c345a.run.pivotal.io
+Authorization: [PRIVATE DATA HIDDEN]
+
+
+
+[1;38mRESPONSE:[0m
+HTTP/1.1 404 Not Found
+Content-Length: 28
+Connection: keep-alive
+Content-Type: application/json
+Date: Mon, 20 Jan 2014 18:56:56 GMT
+Server: thin 1.5.1 codename Straight Razor
+
+{"error":"Entity not found"}
+FAILED
+Server error, status code: 404, error code: 0, message: 

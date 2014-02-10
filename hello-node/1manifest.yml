@@ -1,0 +1,13 @@
+---
+name: nod1
+command: node app.js
+applications:
+- memory: 64M
+  instances: 2
+  host: hn0
+  path: .
+
+env:
+  MANENV0: zero
+  MANENV1: one
+  NEWENV: new
