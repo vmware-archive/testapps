@@ -1,20 +1,15 @@
 #!/bin/bash
 
-echo "Creating useful files..."
-touch ~/workspace/trace/cf_trace.txt
-echo ""
-
 echo "Setting useful environmental variables..."
-export CF_TRACE=~/cf_trace.txt
-export CF_MANIFESTS=true
+export CF_TRACE=~/tmp/cf_trace.txt
 echo ""
 
 echo "Installing useful scripts..."
-cp ~/workspace/testapps/shell-scripts/gcf-update /usr/local/bin
+cp ~/workspace/testapps/shell-scripts/cf-update /usr/local/bin
 echo ""
 
-echo "Updating gcf..."
-gcf-update
+echo "Updating cf to edge..."
+cf-update
 echo ""
 
 echo "Okay, let's go!"
