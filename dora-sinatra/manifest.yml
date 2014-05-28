@@ -1,7 +1,10 @@
 ---
 applications:
-- name: PAPERdora
-  memory: 256M
+- name: dora
+  instances: 1
+  memory: 127M
+  host: doraHost
+  disk_quota: 117M
 # services:
 # - PAPERTRAIL
 # - PAPERTRAIL0
