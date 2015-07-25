@@ -9,10 +9,24 @@ ID = SecureRandom.uuid
 $stdout.sync = true
 $stderr.sync = true
 
+# This is handy for starting metronome logging on multiple instances without having to hit their API
+if ENV["METRONOME"]
+  hours = ENV["METRONOME"]
+  metronome(hours)
+end
+
+
 get '/' do
   host = ENV['VCAP_APP_HOST']
   port = ENV['VCAP_APP_PORT']
   "<h1>Hello from VCAP! via: #{host}:#{port}</h1>"
+end
+
+get '/metronome/:hours' do
+  metronome(params[:hours])
+  # note: using curl or a browser to trigger this will not actually
+  # you know, _load_ anything. This is, well, it's not normal,
+  # but it is _expected._
 end
 
 get '/id' do
@@ -82,4 +96,12 @@ get '/curl/:host/?:port?' do
 #{result}
 </pre>
   HTML
+end
+
+def metronome(:hours)
+  stop_time = Time.now + hours.to_i * 60 * 60
+  while Time.now < stop_time
+    logger.info "Metronome Log from ID #{ID}, running as instance #{ENV['CF_INSTANCE_INDEX']}. Logging will end at #{stop_time}."
+    sleep 1
+  end
 end
